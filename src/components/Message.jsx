@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import styles from "./Message.module.css";
 
 function Message({ message }) {
