@@ -1,5 +1,4 @@
 /* eslint-disable */
-
 import { useNavigate, useSearchParams } from "react-router-dom";
 import {
   MapContainer,
@@ -25,13 +24,13 @@ function Map() {
     position: geolocationPosition,
     getPosition,
   } = useGeolocation();
-  const [Lat, Lng] = useUrlPosition();
+  const [mapLat, mapLng] = useUrlPosition();
 
   useEffect(
     function () {
-      if (Lat && Lng) setMapPosition([Lat, Lng]);
+      if (mapLat && mapLng) setMapPosition([mapLat, mapLng]);
     },
-    [Lat, Lng]
+    [mapLat, mapLng]
   );
 
   useEffect(
